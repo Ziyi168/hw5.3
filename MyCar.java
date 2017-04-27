@@ -40,7 +40,7 @@ public class MyCar {
     	return this.color;
     }
     public String getColor(String color){
-    	return this.color;
+    	return this.color;// "get" does not have to use this, but can.
     }
     public int horsePower(){
 		return this.horsePower;
@@ -48,11 +48,31 @@ public class MyCar {
     public String getEngineSzie(){
     	return this.engineSize;
     }
+    
     public void setHorsePower (int horsePower){
     	this.horsePower = horsePower;
     }
- public String toString(){
-	 return "[ Color: "+ color + " horse power: " + horsePower +" engine size: "+ engineSize +"]";
+    
+    public int getHorsePower(){
+    	return this.horsePower;
+    }
+    
+    public String toString(){
+    	return "[ Color: "+ color + " horse power: " + horsePower +" engine size: "+ engineSize +"]";
 	 
- } 
+    } 
+    
+    public boolean equal(MyCar otherCar){
+    	
+    	if(this.color.equals(otherCar.getColor())
+    			&& this.horsePower == otherCar.getHorsePower()
+    			&& this.engineSize.equals(otherCar.getEngineSzie())){
+    		return true;
+    	}else{
+    		return false;
+    	}
+
+    	
+    }
+    
 }
